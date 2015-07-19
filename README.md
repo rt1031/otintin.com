@@ -1,2 +1,2 @@
-# Project ochincin.com
-みんなで作るチンポ。
+# http://otintin.com
+みんなで作るチンポ。  
