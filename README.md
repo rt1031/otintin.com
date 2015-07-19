@@ -1,2 +1,3 @@
-# http://otintin.com
-みんなで作るチンポ。  
+#otintin.com
+otintin.comはみんなで作るインタラクティブおちんちんです。
+気軽にプルリクを投げてください
