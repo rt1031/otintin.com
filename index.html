@@ -6,7 +6,16 @@
 <body>
 
 <div>
-<video src="otintinAnime.mp4" autoplay autobuffer autoloop loop ></video>
+<script type="text/javascript" src="bower_components/Processing.js"></script>
+<script type="text/processing" data-processing-target="processing-canvas">
+void draw() {
+  background(random(256),random(256),random(256));
+ fill(255);
+textAlign(CENTER,CENTER);
+text("otintin"+".com",width/2,height/2);
+}
+</script>
+<canvas id="processing-canvas"></canvas>
   <img src="DSC_0211.jpg" alt="">
 </div>
 </body>
