@@ -8,10 +8,15 @@
 <div>
 <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
 <script type="text/processing" data-processing-target="processing-canvas">
+void setup() {
+  size(512, 512);
+}
+
 void draw() {
   background(random(256),random(256),random(256));
- fill(255);
+fill(255);
 textAlign(CENTER,CENTER);
+textSize(80);
 text("otintin"+".com",width/2,height/2);
 }
 </script>
