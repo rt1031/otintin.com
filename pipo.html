@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>otintin</title>
+</head>
+<body>
+
+<div>
+<script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
+<script type="text/processing" data-processing-target="processing-canvas">
+PImage bg,front;
+
+
+void setup(){
+  size(500, 500);
+  noStroke();
+}
+
+void draw(){
+  background(#ffffff);
+  bg = loadImage("backpipo.png");
+  tint(int(random(0,255)), int(random(0,255)), int(random(0,255)));
+  image(bg, width/4, height/4, width/2, height/2);
+  front  = loadImage("frontpipo.png");
+  noTint();
+  image(front, width/4, height/4, width/2, height/2);
+
+}
+
+</script>
+<canvas id="processing-canvas"></canvas>
+</body>
+</html>
