@@ -9,7 +9,7 @@
 <div>
 <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
 <script type="text/processing" data-processing-target="processing-canvas">
- /* @pjs preload="backpipo.png,frontpipo.png"; */
+ /* @pjs preload="bgpipo.png,frontpipo.png"; */
 PImage bg,front;
 
 
@@ -20,7 +20,7 @@ void setup(){
 
 void draw(){
   background(#ffffff);
-  bg = loadImage("backpipo.png");
+  bg = loadImage("bgpipo.png");
   tint(int(random(0,255)), int(random(0,255)), int(random(0,255)));
   image(bg, width/4, height/4, width/2, height/2);
   front  = loadImage("frontpipo.png");
