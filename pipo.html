@@ -12,27 +12,22 @@
  /* @pjs preload="bgpipo.png,frontpipo.png"; */
  PImage bg,front;
 
- void setup(){
-   size(500, 500);
-   noStroke();
- }
-
- void draw(){
-   background(#ffffff);
-   bg = loadImage("bgpipo.png");
-   tint(int(random(0,255)), int(random(0,255)), int(random(0,255)));
-   image(bg, width/4, height/4, width/2, height/2);
-   front  = loadImage("frontpipo.png");
-   noTint();
-   image(front, width/4, height/4, width/2, height/2);
-   if (mousePressed) {
-     noLoop();
-   }
-
- }
-   void mouseReleased() {
-     loop();
-   }
+float framecount = 0;
+void setup() {
+  bgpipo = loadImage("bgpipo.png");
+  frontpipo = loadImage("frontpipo.png");
+  size(bgpipo.width, bgpipo.height);
+  colorMode(HSB, 100, 100, 100);
+  frameRate(20);
+}
+void draw() {
+  background(0, 0, 100);
+  tint(framecount%50+50*(framecount%2 == 0 ? 1:0), 100, 100);
+  image(bgpipo, 0, 0, width, height);
+  noTint();
+  image(frontpipo, 0, 0, width, height);
+  framecount++;
+}
 
 </script>
 <canvas id="processing-canvas"></canvas>
