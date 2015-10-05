@@ -6,29 +6,22 @@
 </head>
 <body>
 
-<div>
 <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
 <script type="text/processing" data-processing-target="processing-canvas">
- /* @pjs preload="bgpipo.png,frontpipo.png"; */
- PImage bg,front;
+  /* @pjs preload="pipoMask.png"; */
+  PImage pipoMask;
 
-float framecount = 0;
-void setup() {
-  bgpipo = loadImage("bgpipo.png");
-  frontpipo = loadImage("frontpipo.png");
-  size(bgpipo.width, bgpipo.height);
-  colorMode(HSB, 100, 100, 100);
-  frameRate(20);
-}
-void draw() {
-  background(0, 0, 100);
-  tint(framecount%50+50*(framecount%2 == 0 ? 1:0), 100, 100);
-  image(bgpipo, 0, 0, width, height);
-  noTint();
-  image(frontpipo, 0, 0, width, height);
-  framecount++;
-}
+  void setup() {
+    pipoMask = loadImage("pipoMask.png");
+    size(pipoMask.width, pipoMask.height);
+    colorMode(HSB, 100, 100, 100);
+    frameRate(20);
+  }
 
+  void draw() {
+    background(frameCount%50 + 50*(frameCount%2), 100, 100);
+    image(pipoMask, 0, 0);
+  }
 </script>
 <canvas id="processing-canvas"></canvas>
 <audio src="pi.mp3" autoplay loop></audio>
