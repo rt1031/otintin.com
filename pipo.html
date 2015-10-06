@@ -17,15 +17,10 @@
 	  colorMode(HSB, 100, 100, 100);
 	  frameRate(20);
 	}
-
 	void draw() {
-	  if (mousePressed) {
-	  } else {
+	  if (mousePressed != true) {
 	    background(frameCount%50 + 50*(frameCount%2), 100, 100);
 	    image(pipoMask, 0, 0);
-	    if (mousePressed) {
-	      noLoop();
-	    }
 	  }
 	}
 </script>
