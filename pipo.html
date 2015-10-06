@@ -9,25 +9,25 @@
 <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
 <script type="text/processing" data-processing-target="processing-canvas">
   /* @pjs preload="pipoMask.png"; */
-  PImage pipoMask;
+	PImage pipoMask;
 
-  void setup() {
-    pipoMask = loadImage("pipoMask.png");
-    size(pipoMask.width, pipoMask.height);
-    colorMode(HSB, 100, 100, 100);
-    frameRate(20);
-  }
+	void setup() {
+	  pipoMask = loadImage("pipoMask.png");
+	  size(pipoMask.width, pipoMask.height);
+	  colorMode(HSB, 100, 100, 100);
+	  frameRate(20);
+	}
 
-  void draw() {
-    background(frameCount%50 + 50*(frameCount%2), 100, 100);
-    image(pipoMask, 0, 0);
-		if (mousePressed) {
-			noLoop();
-		}
-  }
-	void mouseReleased() {
-		loop();
- }
+	void draw() {
+	  if (mousePressed) {
+	  } else {
+	    background(frameCount%50 + 50*(frameCount%2), 100, 100);
+	    image(pipoMask, 0, 0);
+	    if (mousePressed) {
+	      noLoop();
+	    }
+	  }
+	}
 </script>
 <canvas id="processing-canvas"></canvas>
 <audio src="pi.mp3" autoplay loop></audio>
