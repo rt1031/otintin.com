@@ -21,6 +21,12 @@
   void draw() {
     background(frameCount%50 + 50*(frameCount%2), 100, 100);
     image(pipoMask, 0, 0);
+		if (mousePressed) {
+			noLoop();
+		}
+		void mouseReleased() {
+    	loop();
+   }
   }
 </script>
 <canvas id="processing-canvas"></canvas>
