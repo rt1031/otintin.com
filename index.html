@@ -13,10 +13,20 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- 自作CSSの読み込み -->
   <link href="css/style.css" rel="stylesheet">
+  
+  <!-- super_contributors.js のJS読み込み -->
+  <script src="js/super_contributors.js"></script>
   <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
   <link rel="stylesheet" href="bower_components/pure/pure-min.css" media="screen" title="no title" charset="utf-8">
   <script type="text/processing" data-processing-target="processing-canvas">
-  void setup() { size(512, 512); } void draw() { background(random(256),random(256),random(256)); fill(255); textAlign(CENTER,CENTER); textSize(80); text("otintin"+".com",width/2,height/2); }
+    void setup() { size(512, 512); }
+    void draw() {
+      background(random(256),random(256),random(256));
+      fill(255);
+      textAlign(CENTER,CENTER);
+      textSize(80);
+      text("otintin"+".com",width/2,height/2);
+    }
   </script>
 </head>
 
@@ -30,9 +40,9 @@
             <p>otintin.comは<a href="https://twitter.com/tw2pde" title="">@tw2pde</a>を応援しています</p>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-        <div class="content">
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+      <div class="content">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <h1>コンテンツ</h1>
             <h2><a href="news.html" title="">速報</a></h2>
@@ -42,6 +52,10 @@
           <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <h1>画像集</h1>
             <img src="img/DSC_0211.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <h1>スーパーコントリビューターズ</h1>
+            <p id="contributors"></p>
           </div>
         </div>
       </div>
