@@ -1,11 +1,12 @@
 body {
-  background:#FAA;
+  background: #FAA;
 }
 
 h1 {
   padding-top: 20px;
   border-bottom:1px solid #AAA;
 }
+
 .content {
   padding: 25px;
   border-radius: 15px;
