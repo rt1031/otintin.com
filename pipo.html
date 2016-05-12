@@ -11,8 +11,9 @@
 	PImage pipoMask;
 
 	void setup() {
+	  translate(width/2, height/2); 
 	  pipoMask = loadImage("pipoMask.png");
-	  size(pipoMask.width, pipoMask.height);
+	  size(, window.innerHeight);
 	  colorMode(HSB, 100, 100, 100);
 	  frameRate(20);
 	}
