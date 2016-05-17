@@ -3,7 +3,7 @@
 	script.src = 'https://api.github.com/repositories/39287637/contributors?callback=cb';
 	document.getElementsByTagName('head')[0].appendChild(script);
   $('#hide-canvas').on('click', function() {
-    $('#processing-canvas').hide();
+    $('#processing-canvas').toggle(200);
   });
 }, false);
 
