@@ -3,32 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<title>otintin</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/super_contributors.js"></script>
+    <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="processing-canvas">
+      /* @pjs preload="img/pipoMask.png"; */
+      PImage pipoMask;
+
+      void setup() {
+        translate(width/2, height/2);
+        pipoMask = loadImage("img/pipoMask.png");
+        size(pipoMask.width, pipoMask.height);
+        colorMode(HSB, 100, 100, 100);
+        frameRate(20);
+      }
+      void draw() {
+        if (mousePressed != true) {
+        background(frameCount%50 + 50*(frameCount%2), 100, 100);
+        image(pipoMask, 0, 0);
+        }
+     }
+    </script>
 </head>
 <body>
 <!-- アクセス解析 -->
 	<a href="http://gn-spawn.github.io/pipo.html">
  		 <img src="https://ga-beacon.appspot.com/UA-77842324-2/gn-spawn.github.io/pipo.html?pixel"/>
 	</a>
-	<script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
-	<script type="text/processing" data-processing-target="processing-canvas">
-	/* @pjs preload="img/pipoMask.png"; */
-	PImage pipoMask;
-
-	void setup() {
-	  translate(width/2, height/2); 
-	  pipoMask = loadImage("img/pipoMask.png");
-	  size(pipoMask.width, pipoMask.height);
-	  colorMode(HSB, 100, 100, 100);
-	  frameRate(20);
-	}
-	void draw() {
-	  if (mousePressed != true) {
-	    background(frameCount%50 + 50*(frameCount%2), 100, 100);
-	    image(pipoMask, 0, 0);
-	  }
-	}
-	</script>
-	<canvas id="processing-canvas"></canvas>
+    <button id="hide-canvas" button type="button" class="btn btn-info">↓これを隠す</button>
+    <br />
+	<canvas id="processing-canvas" class="img-responsive"></canvas>
 	<audio src="sound/pi.mp3" autoplay loop></audio>
 </body>
 </html>
