@@ -1,88 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>otintin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <!-- BootstrapのCSS読み込み -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- jQuery読み込み -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <!-- BootstrapのJS読み込み -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- 自作CSSの読み込み -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/fuck_me_on_github.css" rel="stylesheet">
-
-  <!-- super_contributors.js のJS読み込み -->
-  <script src="js/super_contributors.js"></script>
-  <!--Processing.js-->
-  <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
-  <link rel="stylesheet" href="bower_components/pure/pure-min.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/processing" data-processing-target="processing-canvas">
-    void setup() { size(512, 512); }
-    void draw() {
-      background(random(256),random(256),random(256));
-      fill(255);
-      textAlign(CENTER,CENTER);
-      textSize(80);
-      text("otintin"+".com",width/2,height/2);
-    }
-  </script>
-
-  <!--bezier_curve_otintin.js のJS読み込み-->
-  <script type="text/javascript" src="js/bezier_curve_otintin.js"></script>
-</head>
-
-<body id="index-body">
-  <!-- アクセス解析 -->
-  <a href="http://gn-spawn.github.io/index.html">
-    <img src="https://ga-beacon.appspot.com/UA-77842324-2/gn-spawn.github.io/index.html?pixel" />
-  </a>
-  <span id="forkongithub">
-    <a href="https://github.com/gn-spawn/gn-spawn.github.io"><font size="4">FUCK ME on GitHub</font></a>
-  </span>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-        <div class="content">
-          <div class="text-center">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="gn_spawn" data-size="large">Tweet</a>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="gn_spawn" data-size="large">Tweet</a>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-via="gn_spawn" data-size="large">Tweet</a>
-          </div>
-        </div>
+  <head>
+    <meta charset="utf-8">
+    <title>otintin.com</title>
+  </head>
+  <body>
+    <article class="top">
+      <h1>otintin.com</h1>
+      <p>otintin.comは皆で創る自由でオープンなプロジェクトです</p>
+      <span>See More</span>
+      <a href="#introduce"></a>
+    </article>
+    <article id="introduce">
+      <h1>Processingにて生まれる</h1>
+      <p>
+        otintin.comの最初の作品は、他に類を見ないこのロゴです。
+      </p>
+      <p>「派手に表現する。」</p>
+      <p>これは当サイトのシンボルであると共にプロジェクトの思想にもなっています。</p>
+      <button type="button" name="button"><a href="#team">私たちのチーム</a></button>
+    </article>
+    <article class="team">
+      <h1>私たちのチーム</h1>
+      <div class="card">
+        <img src="" alt="" />
+        <span>ユーザー名</span>
       </div>
-      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-        <div class="content">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-            <button id="hide-canvas" button type="button" class="btn btn-info">↓これを隠す</button>
-            <canvas id="processing-canvas" class="img-responsive" alt="otintin.com"></canvas>
-            <p>otintin.comは<a href="https://twitter.com/tw2pde" title="">@tw2pde</a>を応援しています</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-        <div class="content">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>コンテンツ</h1>
-            <h2><a href="news.html" title="">速報</a></h2>
-            <h2><a href="pipo.html">ピーポくん</a></h2>
-            <h2><a href="sakkyo.html">@sakkyo_</a></h2>
-          </div>
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>画像集</h1>
-            <!--img src="img/DSC_0211.jpg" class="img-responsive" alt=""-->
-            <canvas class="img_cnvs_animetion img-responsive" data-imgsrc="img/DSC_0211.jpg" style="width:100%;"></canvas>
-          </div>
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <h1>スーパーコントリビューターズ</h1>
-            <p id="contributors"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+      <p>otintin.comは、大学生や高校生など若い人材がプロジェクトに貢献しています。また、オープンで自由なプロジェクトのため、今すぐに参加できます。</p>
+      <button type="button" name="button"><a href="https://github.com/gn-spawn/gn-spawn.github.io">ジョインする</a></button>
+    </article>
+  </body>
 </html>
