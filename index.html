@@ -21,14 +21,58 @@
   <script type="text/javascript" src="bower_components/Processing.js/processing.min.js"></script>
   <link rel="stylesheet" href="bower_components/pure/pure-min.css" media="screen" title="no title" charset="utf-8">
   <script type="text/processing" data-processing-target="processing-canvas">
-    void setup() { size(512, 512); }
-    void draw() {
-      background(random(256),random(256),random(256));
+	ArrayList<Otintin> list;
+
+	void setup() {
+	  size(512, 512);
+	  list = new ArrayList<Otintin>();
+	}
+
+	void draw() {
+	  background(random(256),random(256),random(256));
       fill(255);
       textAlign(CENTER,CENTER);
       textSize(80);
       text("otintin"+".com",width/2,height/2);
-    }
+      if (frameCount % 30 == 0) {
+	    list.add(new Otintin(random(width), height));
+	  }
+	  for (int i=0; i < list.size (); i++) {
+	    list.get(i).show();
+	    list.get(i).move();
+	    if (list.get(i).out()){
+	      list.remove(i);
+	    }
+	  }
+	}
+
+	class Otintin {
+	  float y;
+	  float x;
+	  float degree = 0;
+	  Otintin(float x, float y) {
+	    this.x = x;
+	    this.y = y;
+	  }
+	  void show() {
+	    pushMatrix();
+	    translate(x, y);
+	    rotate(radians(degree));
+	    rectMode(CENTER);
+	    rect(0, 0, 10, 40);
+	    ellipse(0, -20, 10, 10);
+	    ellipse(-5, 20, 10, 10);
+	    ellipse(5, 20, 10, 10);
+	    popMatrix();
+	  }
+	  void move() {
+	    degree++;
+	    y-=1;
+	  }
+	  boolean out() {
+	    return ( x<0 || x>width ) || ( y<0 || y>height );
+	  }
+	}
   </script>
 
   <!--bezier_curve_otintin.js のJS読み込み-->
