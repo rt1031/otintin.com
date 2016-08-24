@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>otintin.com</title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <!-- animate.css -->
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css" media="screen" title="no title" charset="utf-8">
-    <!-- style sheet -->
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 
-  </head>
-  <body>
-    <article class="top">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h1>otintin.com</h1>
-        <p>otintin.comは皆で創る自由でオープンなプロジェクトです</p>
-        <a href="#introduce">
-          <span>See More</span>
-          <svg viewBox="0 0 60 60">
-  		      <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-  	      </svg>
-        </a>
-      </div>
-    </article>
-    <article id="introduce">
-      <h1>Processingにて生まれる</h1>
-      <p>
-        otintin.comの最初の作品は、他に類を見ないこのロゴです。
-      </p>
-      <p>「派手に表現する。」</p>
-      <p>これは当サイトのシンボルであると共にプロジェクトの思想にもなっています。</p>
-      <button type="button" name="button"><a href="#team">私たちのチーム</a></button>
-    </article>
-    <article class="team">
-      <h1>私たちのチーム</h1>
-      <div class="card">
-        <img src="" alt="" />
-        <span>ユーザー名</span>
-      </div>
-      <p>otintin.comは、大学生や高校生など若い人材がプロジェクトに貢献しています。また、オープンで自由なプロジェクトのため、今すぐに参加できます。</p>
-      <button type="button" name="button"><a href="https://github.com/gn-spawn/gn-spawn.github.io">ジョインする</a></button>
-    </article>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>otintin.com</title>
+  <link rel="stylesheet/less" href="less/style.less" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet/css" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+  <article class="top">
+    <div class="top-box">
+      <h1 class="top-h1">otintin.com</h1>
+      <p class="top-p">otintin.comは皆で創る自由でオープンなプロジェクトです</p>
+      <a href="#introduce" class="go_introduce">
+        <span class="seemore">See More</span>
+        <svg class="symbol animated infinite bounce" viewBox="0 0 60 60">
+          <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+        </svg>
+      </a>
+    </div>
+  </article>
+  <article class="introduce" id="introduce">
+    <h1>Processingにて生まれる</h1>
+    <p>
+      otintin.comの最初の作品は、他に類を見ないこのロゴです。
+    </p>
+    <p>「派手に表現する。」</p>
+    <p>これは当サイトのシンボルであると共にプロジェクトの思想にもなっています。</p>
+    <button type="button" name="button" class="btn btn-secondary"><a href="#team">私たちのチーム</a></button>
+  </article>
+  <article class="team" id="team">
+    <h1>私たちのチーム</h1>
+    <div class="card">
+      <img src="" alt="" />
+      <span>ユーザー名</span>
+    </div>
+    <p>otintin.comは、大学生や高校生など若い人材がプロジェクトに貢献しています。また、オープンで自由なプロジェクトのため、今すぐに参加できます。</p>
+    <button type="button" name="button" class="btn btn-secondary"><a href="https://github.com/gn-spawn/gn-spawn.github.io">ジョインする</a></button>
+  </article>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+</body>
+
 </html>

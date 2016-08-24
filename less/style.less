@@ -1,0 +1,53 @@
+@import "flexbox.less";
+
+article svg {
+  width: 30px;
+  bottom: 50px;
+}
+body {
+  font-family: Hiragino Sans;
+  color: #727272;
+}
+.top {
+  /*margin: 120px, 0;*/
+  background: linear-gradient(-90deg, #FC00FF, #00DBDE);
+}
+.top-box {
+  .flex-display;
+  .align-items(center);
+  .flex-direction(column);
+}
+.top-h1 {
+  color: #fff;
+  font-weight: lighter;
+  letter-spacing: 1rem;
+}
+.top-p {
+  color: #fff;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.go_introduce {
+  font-weight: lighter;
+  color: #fff;
+}
+article {
+  width: 100vw;
+  height: 100vh;
+  .flex-display;
+  .align-items(center);
+  .justify-content(center);
+  .flex-direction(column);
+}
+.go_introduce {
+  .flex-display;
+  .align-items(center);
+  .flex-direction(column);
+  text-decoration: none;
+}
+.seemore {
+  .flex-direction(column)
+}
+.symbol {
+  .flex-direction(column)
+}
