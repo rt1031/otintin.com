@@ -6,6 +6,6 @@ script:
 install:
 - npm install -g firebase-tools
 after_success:
-- firebase deploy --token $FIREBASE_TOKEN
+- firebase deploy --token "${FIREBASE_TOKEN}"
 env:
   secure: ci7WwK0gn747TNxh4mG3KRfgHnc8UeggBEWIlqrQq+vVIs0H75ULh0OWgZVP0gZpvKj3/6+wQle8PLGLraQ4hch/TTj6Adl9OIG+8aJunNFO/WRrT16ihPhuz51MPz3gtmXg3OyQT92lHSKuvswHwmMIQz+pLd+q27iHckTqwsEj5vdR12QCuZBrEq3ALJiBRJ03eTSEt+g1Gy4S3YpG7NQRotDmS/9tWlyxjFb5oPN1YYZW40BynzS2MAg139cUzlst6kiMXwiw27bK6EySHGmlXXyqzEfJQj0yEoXxAVx6Wdh+npLwdNwQxU/eg0bS9B7J0cBYWSAUMoX+u+mALB2j+zYQnMGd1/NSSzyPJleNpNon5qkHsTApZHfKZLxpqt/cO6yYF0FPWdyHO3qvWgR+9IFFLwsIACrJvIMcRYcDxevSwityUIgAXk6gq5mQgqZYxb+asgdwh2GnKvU5n0dQyjT1TqLSpcLm7c6LFnWnmzvqtX1J7/VO2r0/xvDYu6wlCN1AyDNxYuBl2x5ohMTY7sz4ktzfgaLJOITM00Xj5JXoaWfcFIswVQ9krCrNtGpFnRpo5YoVzUdT6NAUs95nx/O43ZMl4ga4+MS2MlZ1v67fRpoM7pMXofOHKe7TdFkL62QhyMHv/udVl9uc98aVt8+1DaD2yOybnuaWtPM=
