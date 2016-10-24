@@ -1,6 +1,6 @@
 ﻿window.addEventListener('load', function () {
   var script = document.createElement('script');
-  script.src = 'https://api.github.com/repositories/39287637/contributors?callback=cb';
+  script.src = 'https://api.github.com/repositories/67593690/contributors?callback=cb';
   document.getElementsByTagName('head')[0].appendChild(script);
   $('#hide-canvas').on('click', function () {
     $('#processing-canvas').toggle(200);
